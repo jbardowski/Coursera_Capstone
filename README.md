@@ -8,5 +8,25 @@ To facilitate this request, we leverage (a) open source data to find neighborhoo
 
 We then, for each city, tally the number of museums and cultural arts centers, plot their coordinates on a map for visualization, and cluster the venues in each neighbo.
 
-<GET DISTANCE> .... then take the average distance between each venue as a measure of concentration.
-...The cities are then ordered by most museums/concentration ...and our conclusions are submitted to the company.
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    Utilizing the geocode python library, we determined the geographical coordinates for each city and their respective neighborhoods. With those coordinates, we searched for all venues within a half-mile radius of each neighborhood. Then, we kept only the neighborhoods that 
+
+; from all of these , which we use to find museums and cultural arts centers. 
+
+
+
+
+We then, for each city, tally the number of museums and cultural arts centers, plot their coordinates on a map for visualization, and cluster the venues in each neighbo.
+

@@ -39,24 +39,22 @@ Furthermore, we analyzed the aggregate number of museums, historic sites, and ar
 **Exhibit 5: Absolute Number of Museums/Arts Centers Between Cities**
 ![Museums/Arts Centers per City](Images/unscaled_count.png)
 
-The natural problem we faced, however, is how do we adjust for differences between cities so that we could analyze on a equal footing? In response, we selected to scale each city by its respective area. That is, we again used Wikipedia to downloaded the area, in squared kilometers, for each city. 
-
-We then divided the matrix of the aggregate number of museums, historic sites, and arts centers for each city by the vector of each city's square-kilometer area (***Exhibit 6***).
+The natural problem we faced, however, is how do we adjust for differences between cities so that we could analyze on a equal footing? In response, we selected to scale each city by its respective area. That is, we again used Wikipedia to downloaded the area, in squared kilometers, for each city. We then divided the matrix of the aggregate number of museums, historic sites, and arts centers for each city by the vector of each city's square-kilometer area (***Exhibit 6***).
 
 **Exhibit 6: Scaled Number of Museums/Arts Centers Between Cities**
 ![Museums/Arts Centers per City Scaled](Images/scaled_count.png)
 
-In order to describe the neighborhoods that surround located museums, historical sites, and cultural/performing arts centers in each city, we opted to cluster the neighborhoods based on the venue categories in each. Specifically, we used pandas onehot encoding method to segment the targeted neighborhoods by FourSquare's venue category feature, then ran scikit-learn's k-means clustering algorithm.
+In order to describe the neighborhoods that surround located museums, historical sites, and cultural/performing arts centers in each city, we opted to cluster the neighborhoods based on the venue categories in each. Specifically, we used pandas onehot encoding method to segment the targeted neighborhoods by FourSquare's venue category feature, then ran scikit-learn's k-means clustering algorithm using a k-means equal to five (k=5).
 
 
 **Results section**
 
-In this section, we discuss the results of our analysis by each city. 
+This section, discusses the results of our analysis by each city. 
 
-- New York
 
-In ***Exhibit 7***, we map New York City's 
-......ny cluster mapped + cluster value counts + cluster breakout
+- New York City
+
+In ***Exhibit 7***, we map New York City's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 8***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 9***). This led us to conclude that NYC has the most number of museums/arts centers concentrated in neighborhood clusters 1 and 3, while the most common venues surrounding those clusters are Italian restaurants, coffee shops, bars, parks, pizza places, Chinese restaurants, and hotels.
 
 **Exhibit 7: **
 ![ny_cluster_map](Images/ny_clustered_map.png)
@@ -68,13 +66,54 @@ In ***Exhibit 7***, we map New York City's
 ![ny_cluster_breakout](Images/ny_cluster_breakout.png)
 
 
+- Paris
 
-- summarize the most common venues appearing in neighborhoods with museums/arts
+In ***Exhibit 10***, we map Paris' neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 11***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 12***). This led us to conclude that Paris' museums/arts centers are fairly evenly spread across neighborhood clusters, with the exception of cluster 4, while the most common venues surrounding those clusters are hotels, French restaurants, and bars.
+
+**Exhibit 10: **
+![paris_cluster_map](Images/paris_clustered_map.png)
+
+**Exhibit 11: **
+![paris_museum_counts](Images/paris_cluster_count.png)
+
+**Exhibit 12: **
+![paris_cluster_breakout](Images/paris_cluster_breakout.png)
+
+
+- London
+
+In ***Exhibit 13***, we map London's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 14***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 15***). This led us to conclude that London has the most number of museums/arts centers concentrated in neighborhood clusters 4 and 2, while the most common venues surrounding those clusters are hotels, cafes/coffee shops, and pubs, as well as grocery stores in cluster 4.
+
+**Exhibit 13: **
+![london_cluster_map](Images/london_clustered_map.png)
+
+**Exhibit 14: **
+![london_museum_counts](Images/london_cluster_count.png)
+
+**Exhibit 15: **
+![london_cluster_breakout](Images/london_cluster_breakout.png)
+
+
+- Toronto
+
+In ***Exhibit 16***, we map Toronto's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 17***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 18***). This led us to conclude that Toronto has the most number of museums/arts centers concentrated in neighborhood clusters 3 and 2, while the most common venues surrounding those clusters are coffee shops, cafes, and hotels.
+
+**Exhibit 16: **
+![toronto_cluster_map](Images/toronto_clustered_map.png)
+
+**Exhibit 17: **
+![toronto_museum_counts](Images/toronto_cluster_count.png)
+
+**Exhibit 18: **
+![toronto_cluster_breakout](Images/toronto_cluster_breakout.png)
+
 
 
 **Discussion section**
 
-[Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
-Conclusion section where you conclude the report.]
+After comparing the results of each city by scaling the number of venues per square-kilometer, we observe that New York City has the highest number of art galleries and performing arts venues, while Paris has the highest number of art museums and was a close second to New York City in art galleries. Paris also led the group in museums, public arts, and science museums.
 
-- recommend which city our client should select for expansion
+Given clusters of surrounding neighborhoods, we also observe that New York City's museums/arts centers are mostly centered in the tourist areas of Manhattan, with hotels, coffee shops/cafes, restaurants and bars appearing as some of the most recurring venues (albeit, the dispersion of venues is wide in New York). Paris' museums/arts centers are pretty evenly spread out among neighborhood clusters. Venues in London are also spread out geographically, but are clustered in two types of neighborhoods; interestingly, one of those neighborhoods appears to have a residential tilt to it (e.g., there is a high number of grocery stores, bus stations, and parks). The museum/arts scene in Toronto, while also centered in downtown and tourist areas, is, however, much smaller the other cities under consideration, suggesting the investment may not be worth the return. 
+
+CONCLUSION: Based on these findings, we recommend our client is best suited to expand in New York City, with our fallback recommendation being Paris.
+

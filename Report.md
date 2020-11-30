@@ -70,6 +70,7 @@ In ***Exhibit 10***, we map Paris' neighborhoods that contain museums/arts cente
 ![paris_cluster_map](Images/paris_clustered_map.png)
 
 **Exhibit 11: Paris' Number of Museums/Arts Centers Segmented by Neighborhood Cluster**
+
 ![paris_museum_counts](Images/paris_cluster_count.png)
 
 **Exhibit 12: Summary of Paris' Most Common Venues in Neighborhood Clusters with the Most Museums/Arts Centers**

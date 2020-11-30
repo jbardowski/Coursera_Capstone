@@ -15,9 +15,6 @@ To facilitate the client’s request, we leverage data from ***(a)*** Wikipedia,
 
 **Methodology section**
 
-[which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
-]
-
 Using the sources described above, we downloaded the necessary neighborhood names and areas for each city from the web into pandas dataframes, formatting to single out addressess for each neighborhood. Then, utilizing the geocode python library, we determined the geographical coordinates for each city and their respective neighborhoods. 
 
 With the coordinates of each neighborhood from geocode, we accessed FourSquare's API to get all venues within half mile radius. Keeping only the neighborhoods that contained historical sites, museums, and cultural and performing arts centers, we visualized those neighborhoods on a map using the folium library (***Exhibits 1-4***).
@@ -51,18 +48,17 @@ In order to describe the neighborhoods that surround located museums, historical
 
 This section, discusses the results of our analysis by each city. 
 
-
 - New York City
 
 In ***Exhibit 7***, we map New York City's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 8***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 9***). This led us to conclude that NYC has the most number of museums/arts centers concentrated in neighborhood clusters 1 and 3, while the most common venues surrounding those clusters are Italian restaurants, coffee shops, bars, parks, pizza places, Chinese restaurants, and hotels.
 
-**Exhibit 7: **
-![ny_cluster_map](Images/ny_clustered_map.png)
+**Exhibit 7: New York City's Neighborhood Clusters**
+![ny_clusters](Images/ny_clustered_map.png)
 
-**Exhibit 8: **
+**Exhibit 8: New York City's Number of Museums/Arts Centers Segmented by Neighborhood Cluster**
 ![ny_museum_counts](Images/ny_cluster_count.png)
 
-**Exhibit 9: **
+**Exhibit 9: Summary of New York City's Most Common Venues in Neighborhood Clusters with the Most Museums/Arts Centers**
 ![ny_cluster_breakout](Images/ny_cluster_breakout.png)
 
 
@@ -70,13 +66,13 @@ In ***Exhibit 7***, we map New York City's neighborhoods that contain museums/ar
 
 In ***Exhibit 10***, we map Paris' neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 11***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 12***). This led us to conclude that Paris' museums/arts centers are fairly evenly spread across neighborhood clusters, with the exception of cluster 4, while the most common venues surrounding those clusters are hotels, French restaurants, and bars.
 
-**Exhibit 10: **
+**Exhibit 10: Paris' Neighborhood Clusters**
 ![paris_cluster_map](Images/paris_clustered_map.png)
 
-**Exhibit 11: **
+**Exhibit 11: Paris' Number of Museums/Arts Centers Segmented by Neighborhood Cluster**
 ![paris_museum_counts](Images/paris_cluster_count.png)
 
-**Exhibit 12: **
+**Exhibit 12: Summary of Paris' Most Common Venues in Neighborhood Clusters with the Most Museums/Arts Centers**
 ![paris_cluster_breakout](Images/paris_cluster_breakout.png)
 
 
@@ -84,13 +80,13 @@ In ***Exhibit 10***, we map Paris' neighborhoods that contain museums/arts cente
 
 In ***Exhibit 13***, we map London's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 14***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 15***). This led us to conclude that London has the most number of museums/arts centers concentrated in neighborhood clusters 4 and 2, while the most common venues surrounding those clusters are hotels, cafes/coffee shops, and pubs, as well as grocery stores in cluster 4.
 
-**Exhibit 13: **
+**Exhibit 13: London's Neighborhood Clusters**
 ![london_cluster_map](Images/london_clustered_map.png)
 
-**Exhibit 14: **
+**Exhibit 14: London's Number of Museums/Arts Centers Segmented by Neighborhood Cluster**
 ![london_museum_counts](Images/london_cluster_count.png)
 
-**Exhibit 15: **
+**Exhibit 15: Summary of London's Most Common Venues in Neighborhood Clusters with the Most Museums/Arts Centers**
 ![london_cluster_breakout](Images/london_cluster_breakout.png)
 
 
@@ -98,13 +94,13 @@ In ***Exhibit 13***, we map London's neighborhoods that contain museums/arts cen
 
 In ***Exhibit 16***, we map Toronto's neighborhoods that contain museums/arts centers clustered by the k-means algorithm. We then assessed the aggregate number of museums/arts centers per cluster (***Exhibit 17***), then summarize the categories of the most common venues surrounding each cluster of neighborhoods (***Exhibit 18***). This led us to conclude that Toronto has the most number of museums/arts centers concentrated in neighborhood clusters 3 and 2, while the most common venues surrounding those clusters are coffee shops, cafes, and hotels.
 
-**Exhibit 16: **
+**Exhibit 16: Toronto's Neighborhood Clusters**
 ![toronto_cluster_map](Images/toronto_clustered_map.png)
 
-**Exhibit 17: **
+**Exhibit 17: Toronto's Number of Museums/Arts Centers Segmented by Neighborhood Cluster**
 ![toronto_museum_counts](Images/toronto_cluster_count.png)
 
-**Exhibit 18: **
+**Exhibit 18: Summary of Toronto's Most Common Venues in Neighborhood Clusters with the Most Museums/Arts Centers**
 ![toronto_cluster_breakout](Images/toronto_cluster_breakout.png)
 
 
